@@ -77,6 +77,9 @@ def get_browser_options(browser_name, version, args):
     options.set_capability('job_name', JOB_NAME)
     options.set_capability('report_uid', REPORT_ID)
     options.set_capability("vnc", ENABLE_VNC)
+    #
+    options.add_argument("--no-sandbox")
+    #
     if PROXY_SETTINGS:
         options.add_argument("--incognito")
         options.add_argument('--ignore-certificate-errors')
